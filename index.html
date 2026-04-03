@@ -19,17 +19,18 @@
       --mid: #6b7280;
       --text: #1e2330;
       --border: #dde3ef;
+      --screen-bg: #eaeef5;
       --page-w: 210mm;
       --page-h: 297mm;
       --print-side: 10mm;
       --print-top: 10mm;
       --print-bottom: 10mm;
+      --radius: 14px;
     }
 
     html, body {
       width: 100%;
       min-height: 100%;
-      background: #eaeef5;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
       color-adjust: exact;
@@ -37,40 +38,33 @@
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      font-size: 10pt;
       color: var(--text);
-      line-height: 1.4;
+      line-height: 1.45;
+      background: var(--screen-bg);
+      padding: 20px 12px;
+    }
+
+    a {
+      color: inherit;
     }
 
     .page {
-      width: var(--page-w);
-      min-height: var(--page-h);
-      margin: 16px auto;
+      width: min(1120px, 100%);
+      margin: 0 auto;
       background: #fff;
-      box-shadow: 0 4px 32px rgba(0,0,0,.18);
+      box-shadow: 0 10px 36px rgba(15, 32, 66, 0.12);
+      border-radius: var(--radius);
       overflow: hidden;
-      page-break-after: always;
-      break-after: page;
-    }
-
-    .page:last-child {
-      page-break-after: auto;
-      break-after: auto;
-    }
-
-    header, .stat-bar, .body-wrap, aside, main, .job, .job-header, .divider, .resume-footer {
-      break-inside: avoid;
-      page-break-inside: avoid;
     }
 
     header {
       background: var(--navy);
       color: #fff;
-      padding: 24px 30px 18px;
+      padding: 28px 32px 22px;
     }
 
     header .name {
-      font-size: 24pt;
+      font-size: clamp(2rem, 2.8vw, 2.8rem);
       font-weight: 800;
       letter-spacing: .3px;
       line-height: 1.05;
@@ -81,26 +75,27 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 8px;
-      margin-top: 5px;
+      margin-top: 8px;
     }
 
     header .title-bar .role {
-      font-size: 10pt;
+      font-size: 0.98rem;
       color: #a8c0e8;
       font-weight: 600;
     }
 
     header .title-bar .pipe {
       color: var(--red);
-      font-size: 12pt;
+      font-size: 1rem;
+      font-weight: 700;
     }
 
     header .contact-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 10px;
-      font-size: 8.4pt;
+      gap: 12px 18px;
+      margin-top: 14px;
+      font-size: 0.92rem;
       color: #c7d5e9;
     }
 
@@ -109,10 +104,14 @@
       text-decoration: none;
     }
 
+    header .contact-row a:hover {
+      text-decoration: underline;
+    }
+
     header .contact-row span {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
     header .contact-row .dot {
@@ -124,7 +123,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 8px;
-      padding: 8px 24px;
+      padding: 10px 20px;
     }
 
     .stat-bar .stat {
@@ -133,42 +132,42 @@
     }
 
     .stat-bar .stat .num {
-      font-size: 13pt;
+      font-size: clamp(1rem, 1.4vw, 1.25rem);
       font-weight: 800;
-      line-height: 1;
+      line-height: 1.1;
     }
 
     .stat-bar .stat .lbl {
-      font-size: 6.9pt;
+      font-size: 0.7rem;
       opacity: .95;
       text-transform: uppercase;
-      letter-spacing: .45px;
+      letter-spacing: .5px;
       margin-top: 2px;
     }
 
     .body-wrap {
       display: grid;
-      grid-template-columns: 170px 1fr;
-      background: linear-gradient(to right, var(--light) 170px, #fff 170px);
-      align-items: stretch;
+      grid-template-columns: 290px 1fr;
+      align-items: start;
     }
 
     aside {
       background: var(--light);
-      padding: 16px 14px 18px;
+      padding: 22px 18px 24px;
       border-right: 1px solid var(--border);
+      min-height: 100%;
     }
 
     aside .section-title {
-      font-size: 7pt;
+      font-size: 0.7rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .9px;
+      letter-spacing: 1px;
       color: var(--red);
       border-bottom: 2px solid var(--red);
-      padding-bottom: 3px;
-      margin-bottom: 8px;
-      margin-top: 14px;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      margin-top: 18px;
     }
 
     aside .section-title:first-child {
@@ -178,25 +177,25 @@
     aside .tag-list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
     }
 
     aside .tag {
-      font-size: 7.8pt;
+      font-size: 0.82rem;
       color: var(--accent);
       background: #dce8f7;
-      border-radius: 3px;
-      padding: 3px 6px;
+      border-radius: 4px;
+      padding: 4px 8px;
       font-weight: 600;
-      line-height: 1.25;
+      line-height: 1.35;
     }
 
     aside .skill-item {
-      font-size: 8pt;
+      font-size: 0.84rem;
       color: var(--text);
-      padding: 2px 0;
+      padding: 3px 0;
       border-bottom: 1px dashed var(--border);
-      line-height: 1.25;
+      line-height: 1.35;
       word-break: break-word;
     }
 
@@ -204,36 +203,26 @@
       border-bottom: none;
     }
 
-    aside .skill-item a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    aside .skill-item a:hover {
-      text-decoration: underline;
-    }
-
     aside .tool-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 6px;
     }
 
     aside .tool {
-      font-size: 7.2pt;
+      font-size: 0.76rem;
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 2px 5px;
+      border-radius: 4px;
+      padding: 4px 7px;
       color: var(--mid);
-      line-height: 1.15;
+      line-height: 1.2;
     }
 
     aside .edu-item {
-      font-size: 8pt;
+      font-size: 0.84rem;
       color: var(--text);
-      line-height: 1.35;
+      line-height: 1.45;
     }
 
     aside .edu-item .deg {
@@ -245,20 +234,30 @@
       color: var(--mid);
     }
 
+    aside .edu-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    aside .edu-item a:hover {
+      text-decoration: underline;
+    }
+
     main {
-      padding: 16px 22px 18px 18px;
+      padding: 22px 28px 26px 24px;
     }
 
     .section-head {
-      font-size: 7.5pt;
+      font-size: 0.74rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.1px;
       color: var(--navy);
       border-bottom: 2px solid var(--navy);
-      padding-bottom: 3px;
-      margin-bottom: 8px;
-      margin-top: 14px;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      margin-top: 18px;
     }
 
     .section-head:first-child {
@@ -266,12 +265,12 @@
     }
 
     .summary {
-      font-size: 8.8pt;
-      line-height: 1.45;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .job {
-      margin-bottom: 11px;
+      margin-bottom: 15px;
     }
 
     .job:last-child {
@@ -282,11 +281,11 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 8px;
+      gap: 12px;
     }
 
     .job-header .left .company {
-      font-size: 9.6pt;
+      font-size: 1rem;
       font-weight: 800;
       color: var(--navy);
     }
@@ -294,38 +293,38 @@
     .job-header .left .company .loc {
       font-weight: 500;
       color: var(--mid);
-      font-size: 8.3pt;
+      font-size: 0.86rem;
     }
 
     .job-header .left .jobtitle {
-      font-size: 8.8pt;
+      font-size: 0.92rem;
       color: var(--red);
       font-weight: 700;
-      margin-top: 1px;
-      line-height: 1.25;
+      margin-top: 2px;
+      line-height: 1.35;
     }
 
     .job-header .dates {
-      font-size: 7.5pt;
+      font-size: 0.8rem;
       color: var(--mid);
       white-space: nowrap;
       text-align: right;
-      padding-top: 2px;
+      padding-top: 3px;
     }
 
     .job ul {
-      margin-top: 5px;
-      padding-left: 12px;
+      margin-top: 6px;
+      padding-left: 14px;
       list-style: none;
     }
 
     .job ul li {
-      font-size: 8.4pt;
+      font-size: 0.9rem;
       color: var(--text);
-      line-height: 1.34;
-      margin-bottom: 2px;
+      line-height: 1.45;
+      margin-bottom: 4px;
       position: relative;
-      padding-left: 9px;
+      padding-left: 10px;
       orphans: 2;
       widows: 2;
     }
@@ -334,9 +333,9 @@
       content: "▸";
       color: var(--red);
       position: absolute;
-      left: -3px;
-      font-size: 7.5pt;
-      top: 1px;
+      left: -4px;
+      font-size: 0.75rem;
+      top: 2px;
     }
 
     .m {
@@ -351,36 +350,136 @@
 
     .featured-badge {
       display: inline-block;
-      font-size: 6.4pt;
+      font-size: 0.63rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .45px;
       background: var(--red);
       color: #fff;
-      padding: 1px 5px;
-      border-radius: 2px;
-      margin-left: 5px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
       vertical-align: middle;
     }
 
     .divider {
       border: none;
       border-top: 1px solid var(--border);
-      margin: 8px 0;
+      margin: 10px 0;
     }
 
     .resume-footer {
       background: var(--navy);
       color: #a8c0e8;
-      font-size: 7.2pt;
+      font-size: 0.78rem;
       text-align: center;
-      padding: 7px 22px;
+      padding: 10px 20px;
       letter-spacing: .2px;
+      line-height: 1.5;
     }
 
     .resume-footer a {
       color: inherit;
       text-decoration: none;
+    }
+
+    .resume-footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 980px) {
+      body {
+        padding: 12px;
+      }
+
+      .body-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      main {
+        padding: 20px 18px 22px;
+      }
+
+      .stat-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        padding: 20px 16px 16px;
+      }
+
+      header .name {
+        font-size: 2rem;
+      }
+
+      header .title-bar {
+        gap: 6px;
+      }
+
+      header .title-bar .role {
+        font-size: 0.88rem;
+      }
+
+      header .contact-row {
+        font-size: 0.84rem;
+        gap: 8px 12px;
+      }
+
+      .stat-bar {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 12px;
+      }
+
+      .stat-bar .stat .lbl {
+        font-size: 0.66rem;
+      }
+
+      aside,
+      main {
+        padding: 16px 14px 18px;
+      }
+
+      .job-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .job-header .dates {
+        text-align: left;
+        white-space: normal;
+        padding-top: 0;
+      }
+
+      .summary,
+      .job ul li,
+      aside .edu-item,
+      aside .skill-item,
+      aside .tag {
+        font-size: 0.9rem;
+      }
+
+      .resume-footer {
+        font-size: 0.75rem;
+        padding: 12px 14px;
+      }
     }
 
     @page {
@@ -393,6 +492,12 @@
         background: #fff !important;
         width: auto;
         height: auto;
+        padding: 0;
+      }
+
+      body {
+        font-size: 10pt;
+        line-height: 1.4;
       }
 
       .page {
@@ -400,7 +505,133 @@
         min-height: calc(var(--page-h) - var(--print-top) - var(--print-bottom));
         margin: 0 auto;
         box-shadow: none;
+        border-radius: 0;
         border: 0;
+      }
+
+      header {
+        padding: 24px 30px 18px;
+      }
+
+      header .name {
+        font-size: 24pt;
+      }
+
+      header .title-bar .role {
+        font-size: 10pt;
+      }
+
+      header .contact-row {
+        font-size: 8.4pt;
+      }
+
+      .stat-bar {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        padding: 8px 24px;
+      }
+
+      .stat-bar .stat .num {
+        font-size: 13pt;
+      }
+
+      .stat-bar .stat .lbl {
+        font-size: 6.9pt;
+      }
+
+      .body-wrap {
+        grid-template-columns: 170px 1fr;
+      }
+
+      aside {
+        padding: 16px 14px 18px;
+        border-right: 1px solid var(--border);
+        border-bottom: none;
+      }
+
+      main {
+        padding: 16px 22px 18px 18px;
+      }
+
+      aside .section-title {
+        font-size: 7pt;
+        margin-top: 14px;
+        margin-bottom: 8px;
+      }
+
+      aside .tag {
+        font-size: 7.8pt;
+        padding: 3px 6px;
+      }
+
+      aside .skill-item,
+      aside .edu-item {
+        font-size: 8pt;
+        line-height: 1.25;
+      }
+
+      aside .tool {
+        font-size: 7.2pt;
+        padding: 2px 5px;
+      }
+
+      .section-head {
+        font-size: 7.5pt;
+        margin-top: 14px;
+        margin-bottom: 8px;
+      }
+
+      .summary {
+        font-size: 8.8pt;
+        line-height: 1.45;
+      }
+
+      .job {
+        margin-bottom: 11px;
+      }
+
+      .job-header {
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      .job-header .left .company {
+        font-size: 9.6pt;
+      }
+
+      .job-header .left .company .loc {
+        font-size: 8.3pt;
+      }
+
+      .job-header .left .jobtitle {
+        font-size: 8.8pt;
+      }
+
+      .job-header .dates {
+        font-size: 7.5pt;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .job ul li {
+        font-size: 8.4pt;
+        line-height: 1.34;
+        margin-bottom: 2px;
+        padding-left: 9px;
+      }
+
+      .featured-badge {
+        font-size: 6.4pt;
+        padding: 1px 5px;
+      }
+
+      .divider {
+        margin: 8px 0;
+      }
+
+      .resume-footer {
+        font-size: 7.2pt;
+        padding: 7px 22px;
       }
 
       a {
@@ -408,31 +639,9 @@
         text-decoration: none !important;
       }
 
-      .job, .job-header, .job ul, .job li {
+      .job, .job-header, .job ul, .job li, aside, main, .divider, .resume-footer {
         break-inside: avoid;
         page-break-inside: avoid;
-      }
-    }
-
-    @media screen and (max-width: 750px) {
-      .page {
-        width: 100%;
-        min-height: auto;
-        margin: 0;
-      }
-
-      .body-wrap {
-        grid-template-columns: 1fr;
-        background: #fff;
-      }
-
-      aside {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .stat-bar {
-        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -513,16 +722,16 @@
         </div>
 
         <div class="section-title">AI App Building</div>
-       <div class="edu-item" style="margin-top:2px;">
-       Built <strong>19 live AI-assisted apps</strong> as a non-technical builder using tools such as
-       <strong>ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, and Vercel</strong>. Projects span
-       <strong>kids' learning, Indian culture &amp; spirituality, health, career, and utility tools</strong>,
-       reflecting hands-on product thinking, experimentation, and rapid idea-to-launch execution.
-       </div>
-       <div class="edu-item" style="margin-top:6px;">
-       <a href="https://gaurav-gps-growth.github.io/ai-apps/" target="_blank" rel="noopener noreferrer">AI Apps Portfolio</a>
-       </div>
-        
+        <div class="edu-item" style="margin-top:2px;">
+          Built <strong>19 live AI-assisted apps</strong> as a non-technical builder using
+          <strong>ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, and Vercel</strong>. Projects span
+          <strong>kids' learning, Indian culture &amp; spirituality, health, career, and utility tools</strong>,
+          reflecting hands-on product thinking, experimentation, and rapid idea-to-launch execution.
+        </div>
+        <div class="edu-item" style="margin-top:6px;">
+          <a href="https://gaurav-gps-growth.github.io/ai-apps/" target="_blank" rel="noopener noreferrer">AI Apps Portfolio</a>
+        </div>
+
         <div class="section-title">Education</div>
         <div class="edu-item">
           <div class="deg">PGDM (Management)</div>
