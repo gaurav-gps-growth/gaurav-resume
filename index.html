@@ -57,6 +57,34 @@
       overflow: hidden;
     }
 
+    .link-with-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .link-with-icon:hover {
+      text-decoration: underline;
+    }
+
+    .link-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 11px;
+      height: 11px;
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    .link-icon svg {
+      width: 11px;
+      height: 11px;
+      display: block;
+    }
+
     header {
       background: var(--navy);
       color: #fff;
@@ -661,7 +689,18 @@
         <span><span class="dot">📍</span> Gurugram, India</span>
         <span><span class="dot">✉</span> <a href="mailto:gaurav6189@gmail.com">gaurav6189@gmail.com</a></span>
         <span><span class="dot">📱</span> +91 82917 11259</span>
-        <span><span class="dot">🔗</span> <a href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">linkedin.com/in/gs0601</a></span>
+        <span>
+          <span class="dot">🔗</span>
+          <a class="link-with-icon" href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/gs0601
+            <span class="link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </span>
+          </a>
+        </span>
       </div>
     </header>
 
@@ -729,7 +768,15 @@
           reflecting hands-on product thinking, experimentation, and rapid idea-to-launch execution.
         </div>
         <div class="edu-item" style="margin-top:6px;">
-          <a href="https://gaurav-gps-growth.github.io/ai-apps/" target="_blank" rel="noopener noreferrer">AI Apps Portfolio</a>
+          <a class="link-with-icon" href="https://gaurav-gps-growth.github.io/ai-apps/" target="_blank" rel="noopener noreferrer">
+            AI Apps Portfolio
+            <span class="link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </span>
+          </a>
         </div>
 
         <div class="section-title">Education</div>
@@ -889,7 +936,15 @@
       Gaurav Sharma ·
       <a href="mailto:gaurav6189@gmail.com">gaurav6189@gmail.com</a> ·
       +91 82917 11259 ·
-      <a href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">linkedin.com/in/gs0601</a> ·
+      <a class="link-with-icon" href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">
+        linkedin.com/in/gs0601
+        <span class="link-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a> ·
       Gurugram, India
     </div>
   </div>
