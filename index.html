@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Sharma | Enterprise FinTech Sales Leader</title>
+  <meta
+    name="description"
+    content="Gaurav Sharma - Enterprise FinTech Sales Leader with expertise in O2C automation, AR transformation, CFO advisory selling, and AI app building."
+  />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f2042;
+      --red: #c0392b;
+      --accent: #1a3a6e;
+      --light: #f4f6fa;
+      --mid: #6b7280;
+      --text: #1e2330;
+      --border: #dde3ef;
+      --page-w: 210mm;
+      --page-h: 297mm;
+      --print-side: 10mm;
+      --print-top: 10mm;
+      --print-bottom: 10mm;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background: #eaeef5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 10pt;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .page {
+      width: var(--page-w);
+      min-height: var(--page-h);
+      margin: 16px auto;
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,.18);
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    header, .stat-bar, .body-wrap, aside, main, .job, .job-header, .divider, .resume-footer {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 24px 30px 18px;
+    }
+
+    header .name {
+      font-size: 24pt;
+      font-weight: 800;
+      letter-spacing: .3px;
+      line-height: 1.05;
+    }
+
+    header .title-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 5px;
+    }
+
+    header .title-bar .role {
+      font-size: 10pt;
+      color: #a8c0e8;
+      font-weight: 600;
+    }
+
+    header .title-bar .pipe {
+      color: var(--red);
+      font-size: 12pt;
+    }
+
+    header .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      font-size: 8.4pt;
+      color: #c7d5e9;
+    }
+
+    header .contact-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header .contact-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    header .contact-row .dot {
+      color: #ffb3a9;
+    }
+
+    .stat-bar {
+      background: var(--red);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      padding: 8px 24px;
+    }
+
+    .stat-bar .stat {
+      text-align: center;
+      color: #fff;
+    }
+
+    .stat-bar .stat .num {
+      font-size: 13pt;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-bar .stat .lbl {
+      font-size: 6.9pt;
+      opacity: .95;
+      text-transform: uppercase;
+      letter-spacing: .45px;
+      margin-top: 2px;
+    }
+
+    .body-wrap {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      background: linear-gradient(to right, var(--light) 170px, #fff 170px);
+      align-items: stretch;
+    }
+
+    aside {
+      background: var(--light);
+      padding: 16px 14px 18px;
+      border-right: 1px solid var(--border);
+    }
+
+    aside .section-title {
+      font-size: 7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      color: var(--red);
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      margin-top: 14px;
+    }
+
+    aside .section-title:first-child {
+      margin-top: 0;
+    }
+
+    aside .tag-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    aside .tag {
+      font-size: 7.8pt;
+      color: var(--accent);
+      background: #dce8f7;
+      border-radius: 3px;
+      padding: 3px 6px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    aside .skill-item {
+      font-size: 8pt;
+      color: var(--text);
+      padding: 2px 0;
+      border-bottom: 1px dashed var(--border);
+      line-height: 1.25;
+      word-break: break-word;
+    }
+
+    aside .skill-item:last-child {
+      border-bottom: none;
+    }
+
+    aside .skill-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    aside .skill-item a:hover {
+      text-decoration: underline;
+    }
+
+    aside .tool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    aside .tool {
+      font-size: 7.2pt;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2px 5px;
+      color: var(--mid);
+      line-height: 1.15;
+    }
+
+    aside .edu-item {
+      font-size: 8pt;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    aside .edu-item .deg {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    aside .edu-item .inst {
+      color: var(--mid);
+    }
+
+    main {
+      padding: 16px 22px 18px 18px;
+    }
+
+    .section-head {
+      font-size: 7.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      margin-top: 14px;
+    }
+
+    .section-head:first-child {
+      margin-top: 0;
+    }
+
+    .summary {
+      font-size: 8.8pt;
+      line-height: 1.45;
+    }
+
+    .job {
+      margin-bottom: 11px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .job-header .left .company {
+      font-size: 9.6pt;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .job-header .left .company .loc {
+      font-weight: 500;
+      color: var(--mid);
+      font-size: 8.3pt;
+    }
+
+    .job-header .left .jobtitle {
+      font-size: 8.8pt;
+      color: var(--red);
+      font-weight: 700;
+      margin-top: 1px;
+      line-height: 1.25;
+    }
+
+    .job-header .dates {
+      font-size: 7.5pt;
+      color: var(--mid);
+      white-space: nowrap;
+      text-align: right;
+      padding-top: 2px;
+    }
+
+    .job ul {
+      margin-top: 5px;
+      padding-left: 12px;
+      list-style: none;
+    }
+
+    .job ul li {
+      font-size: 8.4pt;
+      color: var(--text);
+      line-height: 1.34;
+      margin-bottom: 2px;
+      position: relative;
+      padding-left: 9px;
+      orphans: 2;
+      widows: 2;
+    }
+
+    .job ul li::before {
+      content: "▸";
+      color: var(--red);
+      position: absolute;
+      left: -3px;
+      font-size: 7.5pt;
+      top: 1px;
+    }
+
+    .m {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .h {
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .featured-badge {
+      display: inline-block;
+      font-size: 6.4pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .45px;
+      background: var(--red);
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 2px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 8px 0;
+    }
+
+    .resume-footer {
+      background: var(--navy);
+      color: #a8c0e8;
+      font-size: 7.2pt;
+      text-align: center;
+      padding: 7px 22px;
+      letter-spacing: .2px;
+    }
+
+    .resume-footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @page {
+      size: A4;
+      margin: var(--print-top) var(--print-side) var(--print-bottom) var(--print-side);
+    }
+
+    @media print {
+      html, body {
+        background: #fff !important;
+        width: auto;
+        height: auto;
+      }
+
+      .page {
+        width: calc(var(--page-w) - (var(--print-side) * 2));
+        min-height: calc(var(--page-h) - var(--print-top) - var(--print-bottom));
+        margin: 0 auto;
+        box-shadow: none;
+        border: 0;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      .job, .job-header, .job ul, .job li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+      }
+
+      .body-wrap {
+        grid-template-columns: 1fr;
+        background: #fff;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="name">Gaurav Sharma</div>
+      <div class="title-bar">
+        <span class="role">Enterprise FinTech Sales Leader</span>
+        <span class="pipe">|</span>
+        <span class="role">O2C &amp; AR Automation</span>
+        <span class="pipe">|</span>
+        <span class="role">CFO Advisory Selling</span>
+      </div>
+      <div class="contact-row">
+        <span><span class="dot">📍</span> Gurugram, India</span>
+        <span><span class="dot">✉</span> <a href="mailto:gaurav6189@gmail.com">gaurav6189@gmail.com</a></span>
+        <span><span class="dot">📱</span> +91 82917 11259</span>
+        <span><span class="dot">🔗</span> <a href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">linkedin.com/in/gs0601</a></span>
+      </div>
+    </header>
+
+    <div class="stat-bar">
+      <div class="stat"><div class="num">$2M+</div><div class="lbl">ARR Growth Driven</div></div>
+      <div class="stat"><div class="num">198%</div><div class="lbl">Revenue Target Hit</div></div>
+      <div class="stat"><div class="num">12+</div><div class="lbl">Years in Enterprise Sales</div></div>
+      <div class="stat"><div class="num">Top 5%</div><div class="lbl">President's Club</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl">Global Markets</div></div>
+    </div>
+
+    <div class="body-wrap">
+      <aside>
+        <div class="section-title">Domain Expertise</div>
+        <div class="tag-list">
+          <span class="tag">Order-to-Cash (O2C) Automation</span>
+          <span class="tag">Accounts Receivable Transformation</span>
+          <span class="tag">Working Capital Optimization</span>
+          <span class="tag">DSO Reduction</span>
+          <span class="tag">AI &amp; Analytics in Finance Ops</span>
+          <span class="tag">CFO &amp; C-Level Engagement</span>
+          <span class="tag">Finance Transformation Programs</span>
+          <span class="tag">Enterprise SaaS Sales</span>
+        </div>
+
+        <div class="section-title">Sales Skills</div>
+        <div class="tag-list" style="gap:3px;">
+          <div class="skill-item">New Logo Acquisition</div>
+          <div class="skill-item">Strategic Account Expansion</div>
+          <div class="skill-item">Consultative &amp; Value-Based Selling</div>
+          <div class="skill-item">Deal Structuring &amp; Negotiation</div>
+          <div class="skill-item">Pipeline Dev &amp; Forecasting</div>
+          <div class="skill-item">ROI Business Case Development</div>
+          <div class="skill-item">Executive Presentations</div>
+          <div class="skill-item">Cross-functional Collaboration</div>
+          <div class="skill-item">SDR Coaching &amp; Team Leadership</div>
+        </div>
+
+        <div class="section-title">Markets</div>
+        <div class="tag-list" style="gap:3px;">
+          <div class="skill-item">North America</div>
+          <div class="skill-item">ANZ / APAC</div>
+          <div class="skill-item">India (Enterprise &amp; Mid-Market)</div>
+          <div class="skill-item">EMEA</div>
+        </div>
+
+        <div class="section-title">Tools &amp; Tech</div>
+        <div class="tool-grid">
+          <span class="tool">Salesforce</span>
+          <span class="tool">HubSpot</span>
+          <span class="tool">Planhat</span>
+          <span class="tool">Celonis</span>
+          <span class="tool">Jira</span>
+          <span class="tool">Miro</span>
+          <span class="tool">Smartsheet</span>
+          <span class="tool">MS Office</span>
+          <span class="tool">Google Suite</span>
+        </div>
+
+        <div class="section-title">AI App Building</div>
+        <div class="tag-list" style="gap:3px;">
+          <div class="skill-item">19 AI-assisted apps shipped</div>
+          <div class="skill-item">No-code / AI-first app building</div>
+          <div class="skill-item">Lovable, v0, Vercel, GitHub</div>
+          <div class="skill-item">ChatGPT, Claude, Perplexity, Gemini</div>
+          <div class="skill-item">Kids learning &amp; family apps</div>
+          <div class="skill-item">Hindu culture &amp; spirituality apps</div>
+          <div class="skill-item">Career, utility &amp; knowledge tools</div>
+          <div class="skill-item">
+            <a href="https://gaurav-gps-growth.github.io/ai-apps/" target="_blank" rel="noopener noreferrer">
+              AI Apps Portfolio
+            </a>
+          </div>
+        </div>
+
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="deg">PGDM (Management)</div>
+          <div class="inst">IMI, New Delhi</div>
+        </div>
+        <br />
+        <div class="edu-item">
+          <div class="deg">B.Tech, Mechanical Engg.</div>
+          <div class="inst">Galgotias College of Engineering &amp; Technology</div>
+        </div>
+      </aside>
+
+      <main>
+        <div class="section-head">Professional Summary</div>
+        <p class="summary">
+          Enterprise Sales Leader with <strong>12+ years</strong> driving complex SaaS &amp; FinTech solutions with deep specialization in
+          <strong>Order-to-Cash (O2C) automation, Accounts Receivable transformation, and AI-powered finance operations</strong>.
+          Proven record of engaging <strong>CFOs, Controllers, and Finance Transformation leaders</strong>, closing multi-stakeholder enterprise deals,
+          and delivering <strong>$2M+ ARR growth</strong>. Achieved <strong>198% of annual revenue target</strong> and earned
+          <strong>President's Club (Top 5%)</strong> recognition at HighRadius. Expert in building ROI-driven business cases around DSO reduction,
+          working capital optimization, and cash flow improvement across North America, EMEA, ANZ, and India.
+        </p>
+
+        <div class="section-head" style="margin-top:12px;">Professional Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">Shipsy <span class="loc">| Gurugram</span></div>
+              <div class="jobtitle">Director, Growth – Enterprise Logistics SaaS</div>
+            </div>
+            <div class="dates">Dec 2025 – Feb 2026</div>
+          </div>
+          <ul>
+            <li>Owned post-implementation customer success and value realization for enterprise logistics SaaS clients</li>
+            <li>Monitored adoption metrics, operational KPIs, and ROI indicators to drive continuous optimization</li>
+            <li>Partnered with customer operations teams to identify process improvement and digital optimization opportunities</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">IRIS Business Services <span class="loc">| Gurugram</span></div>
+              <div class="jobtitle">Sales Manager – ESG &amp; Financial Reporting SaaS</div>
+            </div>
+            <div class="dates">Feb 2025 – Dec 2025</div>
+          </div>
+          <ul>
+            <li>Owned end-to-end enterprise sales across India, ANZ, and Europe targeting finance and compliance leadership</li>
+            <li>Built a <span class="m">$500K+ qualified pipeline within 5 months</span> through structured outbound and partner-led GTM motions</li>
+            <li>Engaged CFOs, Finance Heads, and ESG leaders to drive adoption of data-driven reporting platforms</li>
+            <li>Led and coached a team of 3 SDRs to improve pipeline quality, conversion rates, and account penetration</li>
+            <li>Delivered tailored demos aligned to CSRD, ESRS, and GRI regulatory frameworks</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">Sensei Labs (Canada) <span class="loc">| Remote</span></div>
+              <div class="jobtitle">Customer Success &amp; Growth Manager – Enterprise TMO SaaS</div>
+            </div>
+            <div class="dates">Aug 2022 – Jan 2025</div>
+          </div>
+          <ul>
+            <li>Managed <span class="m">10–15 enterprise customers (~$800K ARR)</span>, owning onboarding, implementation, adoption strategy, and renewal outcomes</li>
+            <li>Designed and executed customer onboarding programs, reducing time-to-value by <span class="m">50%</span></li>
+            <li>Established KPI dashboards tracking product adoption, ROI realization, and operational performance</li>
+            <li>Identified expansion opportunities through usage analytics and stakeholder engagement, driving portfolio growth and retention</li>
+            <li>Partnered with product and engineering to translate customer insights into feature enhancements and roadmap priorities</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">HighRadius Corporation <span class="loc">| Hyderabad</span>
+                <span class="featured-badge">Most Relevant</span>
+              </div>
+              <div class="jobtitle">Strategic Accounts Manager – AI-Powered FinTech (O2C Solutions)</div>
+            </div>
+            <div class="dates">Mar 2021 – Aug 2022</div>
+          </div>
+          <ul>
+            <li>Owned <span class="m">$1M annual ARR target; delivered $1.98M ARR (198% attainment)</span>, earning <span class="h">President's Club recognition (2021)</span></li>
+            <li>Drove AI-powered <span class="h">Order-to-Cash (O2C) &amp; Accounts Receivable automation</span> sales</li>
+            <li>Led executive-level solution workshops targeting <span class="m">5–25% DSO reduction</span> and working capital optimization with CFOs &amp; Controllers across North America &amp; EMEA</li>
+            <li>Developed ROI-driven business cases aligning automation investments with measurable finance outcomes</li>
+            <li>Managed enterprise portfolio up to <span class="m">$1.5M ARR</span>; drove multi-product expansion across Oil &amp; Gas, Insurance, Retail, and Healthcare</li>
+            <li>Directed cross-functional collaboration across sales, solution consulting, and delivery (5+ members) to ensure seamless scoping-to-implementation execution</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">Novartis Healthcare <span class="loc">| Hyderabad</span></div>
+              <div class="jobtitle">Program Manager – Global Finance Transformation</div>
+            </div>
+            <div class="dates">May 2019 – Mar 2021</div>
+          </div>
+          <ul>
+            <li>Contributed to global <span class="h">O2C transformation</span> within SAP ecosystem across multi-regional finance operations</li>
+            <li>Supported harmonization of billing, collections, and cash application processes across global business units</li>
+            <li>Collaborated with R2R and P2P stakeholders as part of enterprise-wide finance digitization programs</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">Capgemini Invent <span class="loc">| Mumbai</span></div>
+              <div class="jobtitle">Program Manager – Digital Finance Transformation</div>
+            </div>
+            <div class="dates">Jun 2016 – May 2019</div>
+          </div>
+          <ul>
+            <li>Advised enterprise clients on finance transformation across <span class="h">O2C, R2R, and P2P</span> domains; conducted process diagnostics and maturity assessments</li>
+            <li>Designed target operating models and process harmonization frameworks aligned with ERP-enabled modernization programs</li>
+            <li>Facilitated stakeholder workshops with finance and IT leadership to define transformation roadmaps and governance structures</li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="job">
+          <div class="job-header">
+            <div class="left">
+              <div class="company">Infosys Ltd <span class="loc">| Jaipur</span></div>
+              <div class="jobtitle">Quality Assurance Engineer – Banking Domain</div>
+            </div>
+            <div class="dates">Jun 2011 – Apr 2014</div>
+          </div>
+          <ul>
+            <li>Contributed to enterprise application implementation projects for a large American bank through structured test planning, execution, and defect lifecycle management</li>
+            <li>Validated finance and operational workflows to ensure system integrity and process accuracy prior to go-live</li>
+            <li>Supported release readiness through documentation, test case design, and milestone tracking</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+
+    <div class="resume-footer">
+      Gaurav Sharma ·
+      <a href="mailto:gaurav6189@gmail.com">gaurav6189@gmail.com</a> ·
+      +91 82917 11259 ·
+      <a href="https://linkedin.com/in/gs0601" target="_blank" rel="noopener noreferrer">linkedin.com/in/gs0601</a> ·
+      Gurugram, India
+    </div>
+  </div>
+</body>
+</html>
